@@ -12,7 +12,7 @@ type Entry interface {
 	//找类并加载class文件
 	//参数是相对路径，用正斜杠分割，文件名带.class后缀
 	//返回值是最终读取的字节码，最终定位到的class文件的Entry和错误信息
-	string() string
+	String() string
 	// 类似java中的toString
 }
 
