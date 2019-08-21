@@ -26,3 +26,4 @@
 
 
 2 准备在公司的电脑上把环境配置好，代码从GitHub上面clone下来，用vscode打开，插件需要重新安装，src/github.com里面代码都没有，好像git仓库里面有git仓库，内部仓库的代码不会下载，现在决定只在github上托管src目录下代码，不把github.com和golang.org文件夹中的内容托管。
+把项目的markdown文件放一起了
