@@ -27,3 +27,21 @@
 
 2 准备在公司的电脑上把环境配置好，代码从GitHub上面clone下来，用vscode打开，插件需要重新安装，src/github.com里面代码都没有，好像git仓库里面有git仓库，内部仓库的代码不会下载，现在决定只在github上托管src目录下代码，不把github.com和golang.org文件夹中的内容托管。
 把项目的markdown文件放一起了，出现错误refusing to merge unrelated histories
+
+3 19-08-21,准备上传今日修改
+    git push   ------>   fatal:No configured push destination.
+    将url中的repo添加
+    git remote add origin 'github.com/TamatoPaste/go.buppt.cn'
+    再git push --------> fatal: The current branch master has no upstream           branch.
+            To push the current branch and set the remote as upstream, use
+                git push --set-upstream origin master
+    原因是没有将本地的分支与远程仓库的分支进行关联
+
+     git pull
+        fatal: 'github.com/TamatoPaste/go.buppt.cn' does not appear to be a git repository
+        fatal: Could not read from remote repository.
+
+        Please make sure you have the correct access rights
+        and the repository exists.
+    百度弄不明白，关闭gitbash，重开，输入 git push
+    TM的OK了，淦！
