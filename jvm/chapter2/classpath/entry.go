@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-const pathListSeparator = string(os.PathListSeparator)
+const pathListSeparator = string(os.PathListSeparator) // 分号
 
 type Entry interface {
 	readClass(className string) ([]byte, Entry, error)
@@ -18,18 +18,18 @@ type Entry interface {
 
 func newEntry(path string) Entry {
 	// 根据参数不同，创建不同的Entry实例
-	if strings.Contains(path, pathListSeparator) {
+	if strings.Contains(path, pathListSeparator) { //路径参数包含分号，说明有多个路径
 		return newCompositeEntry(path)
 	}
 
-	if strings.HasSuffix(path, "*") {
+	if strings.HasSuffix(path, "*") { // 路径参数包含了通配符
 		return newWildcardEntry(path)
 	}
 
 	if strings.HasSuffix(path, ".jar") || strings.HasSuffix(path, ".JAR") ||
-		strings.HasSuffix(path, ".zip") || strings.HasSuffix(path, ".ZIP") {
+		strings.HasSuffix(path, ".zip") || strings.HasSuffix(path, ".ZIP") { // 路径参数指向压缩包
 		return newZipEntry(path)
 	}
 
-	return newDirEntry(path)
+	return newDirEntry(path) // 路径参数指向普通文件夹
 }
