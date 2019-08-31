@@ -167,4 +167,4 @@ func TestDic07(t *testing.T) {
 // 性能
 // 字典对象本身就是指针包装，传参时无需再取地址
 // 创建时准备足够大空间有利于提升性能，因为减少了内存扩张和再哈希过程。
-// make(map[int]int) make(map[int]int,1000) 在数量规模在1000左右时，后者性能比前者搞
+// make(map[int]int) make(map[int]int,1000) 在数量规模在1000左右时，后者性能比前者高得多

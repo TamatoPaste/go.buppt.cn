@@ -33,7 +33,7 @@ func TestString(t *testing.T) {
 	// 8,所有说返回的是byte数，不是字符数
 	fmt.Println(len(a))
 
-	// `` 定义不做转义处理的原始字符串(raw string) tab上那个键
+	// `` 定义不做转义处理的原始字符串(raw string) tab上那个键, 叫重音符或抑音符，也叫反单引号
 	b := `line\n
 	line2`
 	fmt.Println(b)
